@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include('../partial/head.ejs') %>
+    <body>
+        <h1>Welcome To create PAGE!! MAhesh</h1>
+        
+            <%-include('../partial/nav.ejs') %>
+
+        <br><br>
+         <form action="/blogs" method="POST">
+                    <label for="title">Blog title:</label><br>
+                    <input type="text" id="title" name="title" required><br><br> <!--when acess data from brower  the 'name' is used .the name value always same as the given in schema(in models/blogjs file)-->
+
+                    <label for="snipet">Blog Snipet:</label><br>
+                    <input type="text" id="snipet" name="snippet" required><br><br>
+
+                    <label for="body" >Blog body:</label><br>
+                    <textarea id="body" name="body" required></textarea><br><br>
+
+                    <button>SUBMIT</button>
+        </form>
+            
+         <%-include('../partial/footer.ejs')%> 
+    </body>
+
+
+</html>
+

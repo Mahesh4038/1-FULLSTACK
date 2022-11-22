@@ -1,0 +1,31 @@
+body{
+    background: rgb(220, 159, 36);
+}
+
+
+p{
+    color: brown;
+}
+
+.content{
+    color: darkgreen;
+}
+
+.details{
+    position: relative;
+
+}
+
+.delete{
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.delete:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(247, 40, 8, 0.2);
+}

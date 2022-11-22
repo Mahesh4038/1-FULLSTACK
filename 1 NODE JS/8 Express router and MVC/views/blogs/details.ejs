@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%-include('../partial/head.ejs') %>
+
+    <body>
+        <h1>Welcome To single id blog PAGE!! </h1>
+        
+        
+        <%-include('../partial/nav.ejs') %>
+
+
+        <div class="details">
+           <h2><%=blog.title%></h2>
+
+           <p><%=blog.body%></p>
+
+           <a class="delete" data-doc= <%= blog._id %> >DELETE</a>    <!---data-(any value)=   ---->
+          <!--- <a href='/blogs' onclick="return confirm('are you sure delete?') ">DELETE</a>  ---->
+        </div>
+    
+        <%-include('../partial/footer.ejs')%>
+
+
+        <script>
+            //when write inside script tag it will run in browser 
+            const trashcan=document.querySelector('a.delete');
+
+            trashcan.addEventListener('click',(e)=>{
+                const endpoint=`/blogs/${trashcan.dataset.doc}`;
+
+                fetch(endpoint, {  //send AJAX request.  fetch API used to send to server  then it handle by server in app.js) 
+                    method : 'DELETE' //tell server to it is delete request
+
+                })  //It is asychronous therefore use then()
+                .then((response)=> response.json()) //Aafter sucessfuly delete then() block from app.js send the json data that will be handle here.   response.json() -pass json data to actual javascript object 
+                .then((data) => window.location.href=data.redirect) // now acess actual javascript object //now you can see data  in console send by the app.js (browser->right click->inspect->console)
+                .catch(err=>console.log(err))
+            })
+
+        </script>
+       
+    </body>
+
+
+</html>

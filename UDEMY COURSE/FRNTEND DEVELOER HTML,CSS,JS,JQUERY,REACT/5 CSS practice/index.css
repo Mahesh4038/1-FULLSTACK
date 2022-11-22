@@ -1,0 +1,171 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
+.menu-item  {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.87);
+    text-decoration: none;
+    position: relative;
+    top: -27px;
+    padding: 10px;
+
+}
+
+.menu-item:hover{
+    text-decoration-line: underline;
+}
+
+.my-image-icon{
+    border-radius: 50px;
+    padding:10px ;
+}
+
+nav{
+    text-align: right;
+    margin-right: 16px;
+   
+}
+
+.s1{
+    text-align: center;
+    margin-top: 100px;
+   
+    
+}
+
+
+
+#search-box{
+    width: 360px;
+    border-radius: 24px;
+    font-size: 13px;
+    border: 1px solid #38589d;
+    padding: 14px;
+   
+    outline: none;
+    
+}
+
+#search-box:hover{
+    box-shadow:0 1px 6px 0 rgb(228, 5, 5) ;
+    border-color: chartreuse;
+}
+
+#search-box:focus{
+   background-color: rgb(244, 215, 215);
+   color: rgb(30, 32, 33);
+}
+
+
+
+#voice-serach{
+   width: 20px;
+   
+   
+
+}
+
+#input-wrap{
+    position: relative;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+#input-wrap > img{
+    position: absolute;
+    top:5px;
+    right: 430px;
+    
+}
+
+.btn{
+    background-color: blue;
+    color: #eef4fc;
+    border: none;
+    font-size: 14px;
+    height: 36px;
+    padding: 0 16px;
+    margin-top: 10px;
+    background-image: linear-gradient();
+    border-radius: 20px;
+}
+
+.btn:hover{
+   color: #000;;
+   box-shadow: 0px 2px 2px rgb(153, 4, 4);
+}
+
+/*#drop-down{
+    background-color: antiquewhite;
+    font-size: 14px;
+    height: 600px;
+    width: 600px;
+   background-image: linear-gradient(to right,red,green);
+  
+}
+
+
+
+.item{
+    
+   
+  display: inline;
+
+}*/
+
+
+nav{
+    position: relative;
+}
+
+nav > img{
+    
+        position: relative;
+    }
+
+
+
+
+#dropdownitems{
+
+    /*box-shadow: 2px 2px red;*/
+    border-radius: 10px;
+    display: inline-block;
+    /*first make nav tag  postion is relative next here*/
+    position: absolute;
+   right: 68px;
+   top: 60px;
+   display: none;
+   
+
+    
+    
+
+    
+}
+
+.my-image-item{
+    width:40px;
+    height:40px;
+    border-radius: 50px;
+    padding:10px ;
+   
+    
+}
+
+
+
+nav:hover #dropdownitems{
+    display: inline-block;
+    
+}
+
+/*#item1:hover #dropdownitems{
+    display: none;
+    
+}*/
+
+
+
+

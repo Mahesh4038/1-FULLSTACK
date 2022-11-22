@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <%-include('../partial/head.ejs') %>
+
+    <body>
+        <h1>Welcome To HOME PAGE!! MAhesh</h1>
+
+        <% const name ='Mahesh it is EJS'%>
+        <p><%=name%></p>
+        
+        
+        <%-include('../partial/nav.ejs') %>
+
+
+        <div>
+            <h2>All blogs</h2>
+              
+            <%if(blogs.length>0){%>
+                <%blogs.forEach(blog => {%>
+                    <a href="/blogs/<%= blog._id %>">  <!-- when click link go to next page and id visible in url-->
+                        <h3 class="title"><%= blog.title %></h3>
+                        <p class="snipet"><%= blog.snippet %> </p>
+                    </a>
+                    <% })%>
+            <% } else{%>
+                <p>There  no blog display</p>
+            <%} %>
+        </div>
+    
+        <%-include('../partial/footer.ejs')%>
+       
+    </body>
+
+
+</html>

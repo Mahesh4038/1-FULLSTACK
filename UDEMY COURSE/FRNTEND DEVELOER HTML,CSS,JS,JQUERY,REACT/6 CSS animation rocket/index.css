@@ -1,0 +1,56 @@
+body{
+    margin: 0;
+}
+div{
+
+    width: 100vw;
+    height: 100vh;
+    
+    background-image:url(/IMG_0339.JPG);
+    background-size: cover;
+
+    
+}
+
+#rocket{
+    position:absolute;
+    top: 75%;
+    left: 50%;
+    /*transform: translate(-75%,-50%);*/
+
+    animation-name:fly ;
+    animation-duration: 5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+#rocket:hover{
+
+    animation-play-state: paused;
+    
+
+}
+
+
+
+
+@keyframes fly {
+
+    0%{
+
+        transform: translate(-50,0);/*(strat with just move right to left,0) */
+        
+
+
+
+        
+
+    }
+
+    100%{
+
+        transform: translate(-50%,-100vh);/*(strat with just move right to left,go vertical ) */
+
+    }
+    
+}
